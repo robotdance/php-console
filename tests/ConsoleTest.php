@@ -52,6 +52,11 @@ class ConsoleTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(strlen(Console::indent("")), 4);
     }
 
+    public function testIsCli()
+    {
+        $this->assertTrue(Console::isCli());
+    }
+
     public function assertAnsiEnclosing($string, $codes)
     {
         echo $string . "\n";
@@ -59,9 +64,9 @@ class ConsoleTest extends \PHPUnit_Framework_TestCase
             $codes = [$codes];
         }
         foreach($codes as $code) {
-            $this->assertTrue(strpos($string, "$code") > 0, "Codigo da cor nao corresponde ao esperado");
+            $this->assertTrue(strpos($string, "$code") > 0, "Color code does not match expected");
         }
-        $this->assertTrue(strpos($string, '0m') >= 0, "Não encontrado codigo para encerrar a formatacao.");
+        $this->assertTrue(strpos($string, '0m') >= 0, "Enclosing code not found");
     }
 
 }

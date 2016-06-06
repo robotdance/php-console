@@ -11,45 +11,32 @@ use robotdance\Arguments;
 /**
  * Utility for console output
  * @see https://wiki.archlinux.org/index.php/Bash/Prompt_customization
- *
- * Black 0;30
- * Blue 0;34
- * Green 0;32
- * Cyan 0;36
- * Red 0;31
- * Purple 0;35
- * Brown 0;33
- * Light Gray 0;37
- * Dark Gray 1;30
- * Light Blue 1;34
- * Light Green 1;32
- * Light Cyan 1;36
- * Light Red 1;31
- * Light Purple 1;35
- * Yellow 1;33
- * White 1;37
  */
 class Console
 {
-    //TODO refactor
-    const OFF          = 0;
-    const BOLD         = 1;
-    const ITALIC       = 3;
-    const BLACK        = 30;
-    const BLUE         = 34;
-    const GREEN        = 32;
-    const CYAN         = 36;
-    const RED          = 31;
-    const PURPLE       = 35;
-    const BROWN        = 33;
-    const YELLOW       = 33;
-    const GRAY         = 37;
-    const DARK_GRAY    = 30;
-    const LIGHT_BLUE   = 34;
-    const LIGHT_GREEN  = 32;
-    const LIGHT_CYAN   = 36;
-    const LIGHT_RED    = 31;
-    const LIGHT_PURPLE = 35;
+    const OFF        = 0;
+    const BOLD       = 1;
+    const ITALIC     = 3;
+    const UNDERLINE  = 4;
+    const BLINK      = 5;
+    const INVERSE    = 7;
+    const HIDDEN     = 8;
+    const BLACK      = 30;
+    const RED        = 31;
+    const GREEN      = 32;
+    const YELLOW     = 33;
+    const BLUE       = 34;
+    const PURPLE     = 35;
+    const CYAN       = 36;
+    const WHITE      = 37;
+    const BLACK_BG   = 40;
+    const RED_BG     = 41;
+    const GREEN_BG   = 42;
+    const YELLOW_BG  = 43;
+    const BLUE_BG    = 44;
+    const MAGENTA_BG = 45;
+    const CYAN_BG    = 46;
+    const WHITE_BG   = 47;
 
     protected static $ansi = [
         "off"        => "\e[0m",
@@ -178,5 +165,14 @@ class Console
     public static function indent($str, $spaces = 4, $level = 1){
         return str_repeat(" ", $spaces * $level)
             . str_replace("\n", "\n" . str_repeat(" ", $spaces * $level), $str);
+    }
+
+    /**
+     * Return true if the code is running under command line interface (CLI)
+     * @return true if CLI
+     */
+    public static function isCli()
+    {
+        return (substr(php_sapi_name(), 0, 3) == 'cli');
     }
 }
