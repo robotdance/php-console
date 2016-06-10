@@ -11,7 +11,7 @@ PHP-Console is an utility class for console output.
 ```php
 use robotdance/Console;
 ...
-echo Console::red('Bob is going home', 'red'); // red text
+echo Console::red('Bob is going home'); // red text
 echo Console::apply('Bob is going home', ['red', 'bold']); // red and bold text
 echo Console::indent('Bob is going home', 4, 2); two levels of identation
 }
