@@ -175,4 +175,18 @@ class Console
     {
         return (substr(php_sapi_name(), 0, 3) == 'cli');
     }
+
+    /**
+     * Moves cursor relatively to its current position
+     * @param $x Positive value move to right, left otherwise
+     * @param $y Positive value move to down,  up otherwise
+     */
+    public function moveCursorRel($x, $y)
+    {
+        $yChar = ($y < 0) ? "A" : "B"; // up / down
+        $xChar = ($x < 0) ? "D" : "C"; // left / right
+        fwrite(STDOUT, "\e[" . abs($x) . $xChar);
+        fwrite(STDOUT, "\e[" . abs($y) . $yChar);
+    }
+
 }
