@@ -4,36 +4,35 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e274b5492869cc8a2f80ca7b074b3bed",
-    "content-hash": "1d512cf344eea0972497236d52640493",
+    "hash": "89fe1c036bac12c44460b052ebb97bef",
+    "content-hash": "cdf40113d22000c6d96326afe7521eeb",
     "packages": [
         {
             "name": "robotdance/php-arguments",
-            "version": "dev-master",
+            "version": "v0.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robotdance/php-arguments.git",
-                "reference": "20a05653c16feeb9b5ed4bcea60d3ed120eb2179"
+                "reference": "09857d1cb2981f05ec0967096eb3a587acb06efa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robotdance/php-arguments/zipball/20a05653c16feeb9b5ed4bcea60d3ed120eb2179",
-                "reference": "20a05653c16feeb9b5ed4bcea60d3ed120eb2179",
+                "url": "https://api.github.com/repos/robotdance/php-arguments/zipball/09857d1cb2981f05ec0967096eb3a587acb06efa",
+                "reference": "09857d1cb2981f05ec0967096eb3a587acb06efa",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
             },
             "require-dev": {
-                "codeclimate/php-test-reporter": "dev-master",
                 "phpdocumentor/phpdocumentor": "2.*",
                 "phpunit/phpunit": "4.8.24"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "robotdance\\": "src",
-                    "robotdance\\tests\\": "tests"
+                    "monochromist\\": "src",
+                    "monochromist\\tests\\": "tests"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -47,7 +46,7 @@
                 }
             ],
             "description": "Utility class for method arguments validation.",
-            "homepage": "https://github.com/robotdance/php-arguments",
+            "homepage": "https://github.com/monochromist/php-arguments",
             "keywords": [
                 "arguments",
                 "function",
@@ -56,7 +55,7 @@
                 "utility",
                 "validation"
             ],
-            "time": "2016-06-01 16:45:23"
+            "time": "2016-05-31 14:46:01"
         }
     ],
     "packages-dev": [
@@ -3829,7 +3828,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "robotdance/php-arguments": 20,
         "codeclimate/php-test-reporter": 20
     },
     "prefer-stable": false,
