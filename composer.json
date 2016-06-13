@@ -1,9 +1,9 @@
 {
   "name": "robotdance/php-console",
   "type": "library",
-  "description": "Utilities for console output and command line interface PHP scrips.",
+  "description": "Utilities for console output and text animations",
   "homepage": "https://github.com/robotdance/php-console",
-  "keywords": ["php", "console", "cli", "utilities", "colors", "output"],
+  "keywords": ["php", "console", "cli", "utilities", "colors", "output", "animations"],
   "license": "MIT",
   "authors": [{
     "name": "Marcos Menegazzo",
@@ -11,7 +11,7 @@
   }],
   "require": {
     "php": ">=5.3.2",
-    "robotdance/php-arguments": "^0.0.1"
+    "robotdance/php-arguments": "0.*"
   },
   "require-dev": {
     "phpunit/phpunit": "4.8.24",

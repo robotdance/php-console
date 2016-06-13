@@ -1,0 +1,9 @@
+#!/usr/bin/env php
+<?php
+require 'cli-autoload.php';
+
+use robotdance\Sprite;
+
+$spr = new Sprite('./sprites/blinking_programmer.spr');
+$spr->animate();
+?>
